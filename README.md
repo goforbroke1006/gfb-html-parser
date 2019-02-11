@@ -6,3 +6,14 @@ JQuery-style wrapper for crawling over HTML.
 
 * htmlcxx 0.86
 * hcxselect 1.1
+
+
+### Installation
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    sudo make install
+    sudo ldconfig
+
