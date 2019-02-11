@@ -25,6 +25,6 @@ install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 
 install(
         DIRECTORY ${CMAKE_SOURCE_DIR}/vendor/hcxselect/src/
-        DESTINATION include/${PROJECT_NAME}/hcxselect/src
+        DESTINATION include/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.h*"
 )

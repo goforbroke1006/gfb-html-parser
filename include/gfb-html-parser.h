@@ -17,7 +17,7 @@
 #include <curl/curl.h>
 #include <iostream>
 
-#include "hcxselect/src/hcxselect.h"
+#include "hcxselect.h"
 
 namespace gfb::html::parser {
 
