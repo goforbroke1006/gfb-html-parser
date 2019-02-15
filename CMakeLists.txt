@@ -8,18 +8,22 @@ include_directories(
         ${CMAKE_SOURCE_DIR}/vendor/hcxselect/src
 )
 
-add_library(gfb-html-parser SHARED
+add_library(${PROJECT_NAME} SHARED
         src/gfb-html-parser.cpp
         ${CMAKE_SOURCE_DIR}/vendor/hcxselect/src/hcxselect.cpp
         )
 
-target_link_libraries(gfb-html-parser
+target_link_libraries(${PROJECT_NAME}
         curl
         htmlcxx
         )
 
-set_target_properties(gfb-html-parser PROPERTIES PUBLIC_HEADER include/gfb-html-parser.h)
-install(TARGETS gfb-html-parser LIBRARY DESTINATION lib)
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER include/gfb-html-parser.h)
+install(TARGETS ${PROJECT_NAME}
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
+        COMPONENT library
+        )
 install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 #install(DIRECTORY ../../vendor/hcxselect/src DESTINATION include/hcxselect/src)
 
